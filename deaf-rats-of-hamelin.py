@@ -26,7 +26,6 @@ def count_deaf_rats(town):
         if rat == 'O~':
             count += 1
     for rat in after_list:
-        print(rat)
         if rat == '~O':
             count += 1
     
