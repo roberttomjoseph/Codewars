@@ -36,6 +36,6 @@ def first_non_repeating_letter(string):
             
     return string[string1.index(first_char)]
         
-    
+
 
 first_non_repeating_letter('bbbbAcccdfg')
