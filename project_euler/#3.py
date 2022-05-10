@@ -7,7 +7,7 @@ num = 600851475143
 factors = []
 
 for n in range(1,600851475143):
-    if num % n == 0:
-        factors.append(n)
-        print(factors)
-
+    if str(n)[-1] in ['1','3','7','9']:
+        if num % n == 0:
+            factors.append(n)
+            print(factors)
