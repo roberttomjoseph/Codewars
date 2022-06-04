@@ -1,9 +1,18 @@
-passw = input()
+from matplotlib import pyplot as plt
+import numpy as np
 
-if len(passw) >= 8 and len(passw) <=32:
-    if passw[0] >= 'a' and passw[0] <= 'z':
-        if passw[0] >= 'A' and passw[0] <= 'Z':
-            if passw.isalpha():
-                print('True')
-else:
-    print('False')
+n = 10
+
+x_vals = np.arange(1, n+1, 1)
+y_vals = np.random.randint(1, n+1, size=10)
+y_valslist = []
+
+for j in range(n):
+    for i in range(n-1):
+        if y_vals[i] > y_vals[i+1]:
+            y_vals[i],y_vals[i+1] = y_vals[i+1],y_vals[i]
+            y_valslist.append(y_vals)
+
+for list in y_valslist:
+    plt.bar(x_vals, list)
+    plt.savefig('sorts/{list}.png'.format(list=list))

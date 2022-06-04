@@ -6,8 +6,22 @@ num = 600851475143
 
 factors = []
 
-for n in range(1,600851475143):
-    if str(n)[-1] in ['1','3','7','9']:
-        if num % n == 0:
-            factors.append(n)
-            print(factors)
+for n in range(2,num+1):
+    if num % n == 0:
+        factors.append(n)
+        print(factors)
+
+# prime_factors = []
+
+# for factor in factors:
+#     prime = True
+#     for n in range(2,factor):
+#         if factor % n == 0:
+#             prime = False
+#     if prime:
+#         prime_factors.append(factor)
+
+print(factors)
+
+
+
