@@ -2,15 +2,15 @@
 
 # Find the sum of all the primes below two million.
 
+n = 2000000
+primes = [2]
 
-prime_list = [2]
-for n in range(3,2000001):
-    for i in prime_list:
-        if n % i == 0 or i > n**2:
-            break
-        elif prime_list[-1] == i:
-            prime_list.append(n)
-            print(prime_list[-1])
-                
-
-print(prime_list)
+for i in range(3,1000):
+    for j in primes:
+        div = i/j
+        if int(div) == div:
+            pass
+        else:
+            primes.append(i)
+            # if primes[-1] - primes[-2] > 1000:
+    print(primes[-1])

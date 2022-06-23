@@ -11,18 +11,23 @@ factor_list2 = [x for x in range(100,1000)]
 for i in factor_list:
     for j in factor_list2:
         product = i*j
-    key = f'{i} x {j}'
-    palindrome_dict[key] = product
-    factor_list2.pop(0)
-    print(palindrome_dict)
+        key = f'{i}x{j}'
+        palindrome_dict[key] = product
+    print(len(palindrome_dict))
+    factor_list2.remove(i)
+
 
 conf_palindromes = []
 
+
+
 for key in palindrome_dict:
-    potential_palindrome = str(palindrome_dict[key])
-    conf_palindromes.append(potential_palindrome)
-    for i in range(math.ceil(len(potential_palindrome)/2)):
-        if potential_palindrome[i] != potential_palindrome[len(potential_palindrome)-1-i]:
-            conf_palindromes.pop()
-            break
-        print(conf_palindromes)
+    pot = str(palindrome_dict[key])
+    conf_palindromes.append(pot)
+    div = len(pot)/2
+    if div == int(div):
+        for i in range(div):
+            if pot[i] != pot[(1+i)*-1]:
+                conf_palindromes.remove(pot)
+    print(conf_palindromes)
+            
