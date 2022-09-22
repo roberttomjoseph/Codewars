@@ -1,3 +1,7 @@
+import time
+
+start = time.time()
+
 def lengthOfLongestSubstring(s):
     
     count_list = []
@@ -14,9 +18,14 @@ def lengthOfLongestSubstring(s):
         substring += letter
         
     count_list.sort()
+    print(count_list)
     return count_list[-1]
         
             
             
-            
 lengthOfLongestSubstring('pwwkew') 
+
+
+end = time.time()
+
+print("The time of execution of above program is :",(end-start) * 10**3, "ms")
